@@ -1,12 +1,12 @@
 CC := g++
-CFLAGS := -g -Wall -Wextra -std=gnu99
+CFLAGS := -g -Wall -Wextra -std=c++2a
 LDFLAGS :=
 LIBS :=
 INCLUDE :=
 SRC_DIR := ./src
 OBJ_DIR := ./obj
-SOURCES := $(shell ls $(SRC_DIR)/*.c)
-OBJS := $(subst $(SRC_DIR),$(OBJ_DIR), $(SOURCES:.c=.o)) 
+SOURCES := $(shell ls $(SRC_DIR)/*.cpp)
+OBJS := $(subst $(SRC_DIR),$(OBJ_DIR), $(SOURCES:.cpp=.o)) 
 TARGET := oyainput
 SUPERUSER := root
 VERSION := 1.2
@@ -17,7 +17,7 @@ INST_BIN_DIR := /usr/local/bin
 $(TARGET): $(OBJS) $(LIBS)
 	$(CC) -o $@ $(OBJS) $(LDFLAGS)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@if [ ! -d $(OBJ_DIR) ]; \
 		then echo "mkdir -p $(OBJ_DIR)" ; \
 		mkdir -p $(OBJ_DIR); fi

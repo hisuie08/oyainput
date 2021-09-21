@@ -177,12 +177,12 @@ typedef struct OyayubiEvent {
 } OYAYUBI_EVENT;
 
 typedef struct KeyNameCode {
-	char *name;
+	const char *name;
 	__u16 value;
 } KEYNAMECODE;
 
 typedef struct MojiNameCode {
-	char *name;
+	const char *name;
 	int value;
 } MOJINAMECODE;
 

@@ -159,46 +159,53 @@
 #define IMTYPE_IBUS 2
 #define IMTYPE_UIM 3
 
-typedef struct keymapinfo {
+typedef struct keymapinfo
+{
 	__u16 keyCode;
 	int moji;
 } KEYMAP_INFO;
 
-typedef struct romajiinfo {
+typedef struct romajiinfo
+{
 	__u16 outCode1;
 	__u16 outCode2;
 	__u16 outCode3;
 } ROMAJI_INFO;
 
-typedef struct OyayubiEvent {
+typedef struct OyayubiEvent
+{
 	int eventType;
 	__u16 keyCode;
 	int isRepeat;
 } OYAYUBI_EVENT;
 
-typedef struct KeyNameCode {
+typedef struct KeyNameCode
+{
 	const char *name;
 	__u16 value;
 } KEYNAMECODE;
 
-typedef struct MojiNameCode {
+typedef struct MojiNameCode
+{
 	const char *name;
 	int value;
 } MOJINAMECODE;
 
-typedef struct KbdDevInfo {
-    char name[BUFSIZE];
-    char devno[3];
+typedef struct KbdDevInfo
+{
+	char name[BUFSIZE];
+	char devno[3];
 } KBDDEVINFO;
 
-
 // standard path
-#define INPUT_EVENT_PATH  "/dev/input/"
+#define INPUT_EVENT_PATH "/dev/input/"
 #define GREP_CMD "/bin/grep"
 
-#define die(str, args...) do { \
-		perror(str); \
+#define die(str, args...)   \
+	do                      \
+	{                       \
+		perror(str);        \
 		exit(EXIT_FAILURE); \
-	} while(0)
+	} while (0)
 
 #define UNUSED_VARIABLE(x) (void)(x)

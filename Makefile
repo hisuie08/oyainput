@@ -1,4 +1,4 @@
-CC := gcc
+CC := g++
 CFLAGS := -g -Wall -Wextra -std=gnu99
 LDFLAGS :=
 LIBS :=

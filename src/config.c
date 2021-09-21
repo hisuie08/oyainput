@@ -12,7 +12,6 @@
 #include "config.h"
 #include "functions.h"
 
-
 KEYNAMECODE keyNameCodeTable[] = {
 	{"ESC", KEY_ESC},
 	{"1", KEY_1},
@@ -165,134 +164,132 @@ KEYNAMECODE keyNameCodeTable[] = {
 	{"F21", KEY_F21},
 	{"F22", KEY_F22},
 	{"F23", KEY_F23},
-	{"F24", KEY_F24}
-};
+	{"F24", KEY_F24}};
 
 MOJINAMECODE mojiNameCodeTable[] = {
-	{"NONE",1},
-	{"A",1},
-	{"I",2},
-	{"U",3},
-	{"E",4},
-	{"O",5},
-	{"KA",6},
-	{"KI",7},
-	{"KU",8},
-	{"KE",9},
-	{"KO",10},
-	{"SA",11},
-	{"SI",12},
-	{"SU",13},
-	{"SE",14},
-	{"SO",15},
-	{"TA",16},
-	{"TI",17},
-	{"TU",18},
-	{"TE",19},
-	{"TO",20},
-	{"NA",21},
-	{"NI",22},
-	{"NU",23},
-	{"NE",24},
-	{"NO",25},
-	{"HA",26},
-	{"HI",27},
-	{"HU",28},
-	{"HE",29},
-	{"HO",30},
-	{"MA",31},
-	{"MI",32},
-	{"MU",33},
-	{"ME",34},
-	{"MO",35},
-	{"YA",36},
-	{"YI",37},
-	{"YU",38},
-	{"YE",39},
-	{"YO",40},
-	{"RA",41},
-	{"RI",42},
-	{"RU",43},
-	{"RE",44},
-	{"RO",45},
-	{"GA",46},
-	{"GI",47},
-	{"GU",48},
-	{"GE",49},
-	{"GO",50},
-	{"ZA",51},
-	{"ZI",52},
-	{"ZU",53},
-	{"ZE",54},
-	{"ZO",55},
-	{"DA",56},
-	{"DI",57},
-	{"DU",58},
-	{"DE",59},
-	{"DO",60},
-	{"BA",61},
-	{"BI",62},
-	{"BU",63},
-	{"BE",64},
-	{"BO",65},
-	{"PA",66},
-	{"PI",67},
-	{"PU",68},
-	{"PE",69},
-	{"PO",70},
-	{"WA",71},
-	{"WI",72},
-	{"WU",73},
-	{"WE",74},
-	{"WO",75},
-	{"XA",76},
-	{"XI",77},
-	{"XU",78},
-	{"XE",79},
-	{"XO",80},
-	{"XYA",81},
-	{"XYI",82},
-	{"XYU",83},
-	{"XYE",84},
-	{"XYO",85},
-	{"XTU",86},
-	{"NN",87},
-	{"VU",88},
-	{"DEL",89},
-	{"BS",90},
-	{"QUESTION",91},
-	{"SLASH",92},
-	{"TILDE",93},
-	{"LKAGI",94},
-	{"RKAGI",95},
-	{"LBRACKET",96},
-	{"RBRACKET",97},
-	{"LPAREN",98},
-	{"RPAREN",99},
-	{"0",100},
-	{"1",101},
-	{"2",102},
-	{"3",103},
-	{"4",104},
-	{"5",105},
-	{"6",106},
-	{"7",107},
-	{"8",108},
-	{"9",109},
-	{"MINUS",110},
-	{"PERIOD",111},
-	{"COMMA",112},
-	{"KUTEN",113},
-	{"KUTOUTEN",114},
-	{"NAKAGURO",115},
-	{"DAKUTEN",116},
-	{"HANDAKUTEN",117},
-	{"LKAKKO",118},
-	{"RKAKKO",119},
+	{"NONE", 1},
+	{"A", 1},
+	{"I", 2},
+	{"U", 3},
+	{"E", 4},
+	{"O", 5},
+	{"KA", 6},
+	{"KI", 7},
+	{"KU", 8},
+	{"KE", 9},
+	{"KO", 10},
+	{"SA", 11},
+	{"SI", 12},
+	{"SU", 13},
+	{"SE", 14},
+	{"SO", 15},
+	{"TA", 16},
+	{"TI", 17},
+	{"TU", 18},
+	{"TE", 19},
+	{"TO", 20},
+	{"NA", 21},
+	{"NI", 22},
+	{"NU", 23},
+	{"NE", 24},
+	{"NO", 25},
+	{"HA", 26},
+	{"HI", 27},
+	{"HU", 28},
+	{"HE", 29},
+	{"HO", 30},
+	{"MA", 31},
+	{"MI", 32},
+	{"MU", 33},
+	{"ME", 34},
+	{"MO", 35},
+	{"YA", 36},
+	{"YI", 37},
+	{"YU", 38},
+	{"YE", 39},
+	{"YO", 40},
+	{"RA", 41},
+	{"RI", 42},
+	{"RU", 43},
+	{"RE", 44},
+	{"RO", 45},
+	{"GA", 46},
+	{"GI", 47},
+	{"GU", 48},
+	{"GE", 49},
+	{"GO", 50},
+	{"ZA", 51},
+	{"ZI", 52},
+	{"ZU", 53},
+	{"ZE", 54},
+	{"ZO", 55},
+	{"DA", 56},
+	{"DI", 57},
+	{"DU", 58},
+	{"DE", 59},
+	{"DO", 60},
+	{"BA", 61},
+	{"BI", 62},
+	{"BU", 63},
+	{"BE", 64},
+	{"BO", 65},
+	{"PA", 66},
+	{"PI", 67},
+	{"PU", 68},
+	{"PE", 69},
+	{"PO", 70},
+	{"WA", 71},
+	{"WI", 72},
+	{"WU", 73},
+	{"WE", 74},
+	{"WO", 75},
+	{"XA", 76},
+	{"XI", 77},
+	{"XU", 78},
+	{"XE", 79},
+	{"XO", 80},
+	{"XYA", 81},
+	{"XYI", 82},
+	{"XYU", 83},
+	{"XYE", 84},
+	{"XYO", 85},
+	{"XTU", 86},
+	{"NN", 87},
+	{"VU", 88},
+	{"DEL", 89},
+	{"BS", 90},
+	{"QUESTION", 91},
+	{"SLASH", 92},
+	{"TILDE", 93},
+	{"LKAGI", 94},
+	{"RKAGI", 95},
+	{"LBRACKET", 96},
+	{"RBRACKET", 97},
+	{"LPAREN", 98},
+	{"RPAREN", 99},
+	{"0", 100},
+	{"1", 101},
+	{"2", 102},
+	{"3", 103},
+	{"4", 104},
+	{"5", 105},
+	{"6", 106},
+	{"7", 107},
+	{"8", 108},
+	{"9", 109},
+	{"MINUS", 110},
+	{"PERIOD", 111},
+	{"COMMA", 112},
+	{"KUTEN", 113},
+	{"KUTOUTEN", 114},
+	{"NAKAGURO", 115},
+	{"DAKUTEN", 116},
+	{"HANDAKUTEN", 117},
+	{"LKAKKO", 118},
+	{"RKAKKO", 119},
 };
 
-
-Boolean load_config(char* path)
+Boolean load_config(char *path)
 {
 	FILE *fp;
 	char line[128];
@@ -304,17 +301,21 @@ Boolean load_config(char* path)
 	char keyname[128];
 	char mojiname[128];
 
-	if ((fp = fopen(path, "r")) == NULL) {
+	if ((fp = fopen(path, "r")) == NULL)
+	{
 		return FALSE;
 	}
 
-	while ((str = fgets(line, 128, fp)) != NULL) {
+	while ((str = fgets(line, 128, fp)) != NULL)
+	{
 		key[0] = 0;
 		value[0] = 0;
 
 		trim(line);
-		if(strcmp(line,"\n")==0) continue;
-		if(strncmp(line,"#",1)==0) continue;
+		if (strcmp(line, "\n") == 0)
+			continue;
+		if (strncmp(line, "#", 1) == 0)
+			continue;
 
 		sscanf(line, "%[^=]=%s", key, value);
 		//printf("key = %s, value = %s \n", key, value);
@@ -326,67 +327,96 @@ Boolean load_config(char* path)
 				set_inputdevice_path(devpath);
 			}
 		} else */
-		if (strcasecmp(key, "KEYBOARDNAME")==0) {
+		if (strcasecmp(key, "KEYBOARDNAME") == 0)
+		{
 			printf("KEYBOARDNAME: %s\n", value);
 			set_keyboardname(value);
-		} else if (strcasecmp(key, "LOYAKEY")==0) {
+		}
+		else if (strcasecmp(key, "LOYAKEY") == 0)
+		{
 			kc = keyname_to_code(value);
-			if (kc != 0) {
+			if (kc != 0)
+			{
 				printf("LOYAKEY: %s\n", value);
 				set_left_oyakey(kc);
 			}
-		} else if (strcasecmp(key, "ROYAKEY")==0) {
+		}
+		else if (strcasecmp(key, "ROYAKEY") == 0)
+		{
 			kc = keyname_to_code(value);
-			if (kc != 0) {
+			if (kc != 0)
+			{
 				printf("ROYAKEY: %s\n", value);
 				set_right_oyakey(kc);
 			}
-		} else if (strcasecmp(key, "ONKEY")==0) {
+		}
+		else if (strcasecmp(key, "ONKEY") == 0)
+		{
 			kc = keyname_to_code(value);
-			if (kc != 0) {
+			if (kc != 0)
+			{
 				printf("ONKEY: %s\n", value);
 				set_onkey(kc);
 			}
-		} else if (strcasecmp(key, "OFFKEY")==0) {
+		}
+		else if (strcasecmp(key, "OFFKEY") == 0)
+		{
 			kc = keyname_to_code(value);
-			if (kc != 0) {
+			if (kc != 0)
+			{
 				printf("OFFKEY: %s\n", value);
 				set_offkey(kc);
 			}
-		} else if (strcasecmp(key, "IM")==0) {
+		}
+		else if (strcasecmp(key, "IM") == 0)
+		{
 			printf("IM: %s\n", value);
 			set_imtype(value);
-		}else if (strcasecmp(key, "CHARTIME")==0) {
+		}
+		else if (strcasecmp(key, "CHARTIME") == 0)
+		{
 			printf("CHARTIME: %s\n", value);
 			set_char_time(atoi(value));
-		}else if (strcasecmp(key, "OYATIME")==0) {
+		}
+		else if (strcasecmp(key, "OYATIME") == 0)
+		{
 			printf("OYATIME: %s\n", value);
 			set_oya_time(atoi(value));
-		}else if (strcasecmp(key, "NICOLATIME")==0) {
+		}
+		else if (strcasecmp(key, "NICOLATIME") == 0)
+		{
 			printf("NICOLATIME: %s\n", value);
 			set_nicola_time(atoi(value));
-		} else if (strcasecmp(key, "KEYADD")==0) {
+		}
+		else if (strcasecmp(key, "KEYADD") == 0)
+		{
 			sscanf(value, "%[^:]:%s", keyname, mojiname);
 			kc = keyname_to_code(keyname);
 			mc = mojiname_to_code(mojiname);
-			if (kc != 0) {
+			if (kc != 0)
+			{
 				printf("KEYADD: %s=%s\n", keyname, mojiname);
 				add_key_moji(kc, mc);
 			}
-		} else if (strcasecmp(key, "LKEYADD")==0) {
+		}
+		else if (strcasecmp(key, "LKEYADD") == 0)
+		{
 			sscanf(value, "%[^:]:%s", keyname, mojiname);
 			kc = keyname_to_code(keyname);
 			mc = mojiname_to_code(mojiname);
-			if (kc != 0) {
+			if (kc != 0)
+			{
 				printf("LKEYADD: %s=%s\n", keyname, mojiname);
 				add_left_key_moji(kc, mc);
 			}
-
-		} else if (strcasecmp(key, "RKEYADD")==0) {
+		}
+		else if (strcasecmp(key, "RKEYADD") == 0)
+		{
 			sscanf(value, "%[^:]:%s", keyname, mojiname);
 			kc = keyname_to_code(keyname);
 			mc = mojiname_to_code(mojiname);
-			if (kc != 0) {
+			if (kc != 0)
+			{
 				printf("RKEYADD: %s=%s\n", keyname, mojiname);
 				add_right_key_moji(kc, mc);
 			}
@@ -399,14 +429,15 @@ Boolean load_config(char* path)
 Boolean save_config(char *path)
 {
 	FILE *fp;
-	if ((fp = fopen(path, "w")) == NULL) {
+	if ((fp = fopen(path, "w")) == NULL)
+	{
 		return FALSE;
 	}
 	fprintf(fp, "# キーボード名\n");
 	fprintf(fp, "#KEYBOARDNAME=XXXX\n");
 	fprintf(fp, "\n");
 	fprintf(fp, "# 左親指キー　(スペースキー＝SPACE, 無変換キー＝MUHENKAN)\n");
-	fprintf(fp, "LOYAKEY=SPACE\n");
+	fprintf(fp, "LOYAKEY=MUHENKAN\n");
 	fprintf(fp, "\n");
 	fprintf(fp, "# 右親指キー　(変換キー＝HENKAN,ひらがなカタカナキー＝KATAKANAHIRAGANA)\n");
 	fprintf(fp, "ROYAKEY=HENKAN\n");
@@ -434,30 +465,37 @@ Boolean save_config(char *path)
 	return TRUE;
 }
 
-
-__u16 keyname_to_code(char* key_name){
+__u16 keyname_to_code(char *key_name)
+{
 	int len = sizeof(keyNameCodeTable) / sizeof(KEYNAMECODE);
-	KEYNAMECODE* p = keyNameCodeTable;
-	for(int i = 0; i < len; i++, p++) {
-		if (strcmp(key_name, p->name)==0) {
+	KEYNAMECODE *p = keyNameCodeTable;
+	for (int i = 0; i < len; i++, p++)
+	{
+		if (strcmp(key_name, p->name) == 0)
+		{
 			return p->value;
 		}
 	}
-	if(key_name != NULL && *key_name != 0) {
+	if (key_name != NULL && *key_name != 0)
+	{
 		printf("Unknown key name, %s\n", key_name);
 	}
 	return 0;
 }
 
-int mojiname_to_code(char* moji_name){
+int mojiname_to_code(char *moji_name)
+{
 	int len = sizeof(mojiNameCodeTable) / sizeof(MOJINAMECODE);
-	MOJINAMECODE* p = mojiNameCodeTable;
-	for(int i = 0; i < len; i++, p++) {
-		if (strcmp(moji_name, p->name)==0) {
+	MOJINAMECODE *p = mojiNameCodeTable;
+	for (int i = 0; i < len; i++, p++)
+	{
+		if (strcmp(moji_name, p->name) == 0)
+		{
 			return p->value;
 		}
 	}
-	if(moji_name != NULL && *moji_name != 0) {
+	if (moji_name != NULL && *moji_name != 0)
+	{
 		printf("Unknown moji name, %s\n", moji_name);
 	}
 	return 0;

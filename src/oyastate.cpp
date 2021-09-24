@@ -187,6 +187,20 @@ KEYMAP_INFO oyakanaRTableRomajiDefault[] = {
 	{KEY_DOT, MOJI_WA},
 	{KEY_SLASH, MOJI_XO}};
 
+KEYMAP_INFO shiftLtableRomajiDefault[] = {
+	{KEY_P, MOJI_PI},
+	{KEY_Y, MOJI_PA},
+	{KEY_N, MOJI_PU},
+	{KEY_COMMA, MOJI_PE},
+	{KEY_L, MOJI_PO}};
+
+KEYMAP_INFO shiftRtableRomajiDefault[] = {
+	{KEY_P, MOJI_PI},
+	{KEY_Y, MOJI_PA},
+	{KEY_N, MOJI_PU},
+	{KEY_COMMA, MOJI_PE},
+	{KEY_L, MOJI_PO}};
+
 ROMAJI_INFO romaKeys[] = {
 	[MOJI_UNDEF] = {0, 0, 0},							  /* undef */
 	[MOJI_A] = {KEY_A, 0, 0},							  /* MOJI_A 1 */
@@ -314,9 +328,13 @@ ROMAJI_INFO romaKeys[] = {
 KEYMAP_INFO *oyakanaTableRomaji;
 KEYMAP_INFO *oyakanaLTableRomaji;
 KEYMAP_INFO *oyakanaRTableRomaji;
+KEYMAP_INFO *shiftLtableRomaji;
+KEYMAP_INFO *shiftRtableRomaji;
 int oyakanaTableRomajiSize = 0;
 int oyakanaLTableRomajiSize = 0;
 int oyakanaRTableRomajiSize = 0;
+int shiftLtableRomajiSize = 0;
+int shiftRtableRomajiSize = 0;
 static __u16 *mojiKeyTable = 0;
 static int mojiKeyTableSize = 0;
 static int _state;
@@ -335,7 +353,7 @@ long e_oyaTime = 200;	//	親指->文字同時打鍵検出許容期間（簡易�
 long e_nicolaTime = 50; //	親指単独打鍵みなし期間
 
 // 親指シフトキーとみなすキーコード
-__u16 e_loya_keycode = KEY_SPACE; // KEY_MUHENKAN
+__u16 e_loya_keycode = KEY_MUHENKAN; // KEY_MUHENKAN
 __u16 e_roya_keycode = KEY_HENKAN;
 
 static OYAYUBI_EVENT timer_ev;
@@ -383,12 +401,18 @@ void oyayubi_state_init()
 	oyakanaTableRomaji = (KEYMAP_INFO *)malloc(sizeof(oyakanaTableRomajiDefault));
 	oyakanaLTableRomaji = (KEYMAP_INFO *)malloc(sizeof(oyakanaLTableRomajiDefault));
 	oyakanaRTableRomaji = (KEYMAP_INFO *)malloc(sizeof(oyakanaRTableRomajiDefault));
+	shiftLtableRomaji = (KEYMAP_INFO *)malloc(sizeof(shiftLtableRomajiDefault));
+	shiftRtableRomaji = (KEYMAP_INFO *)malloc(sizeof(shiftRtableRomajiDefault));
 	memcpy(oyakanaTableRomaji, oyakanaTableRomajiDefault, sizeof(oyakanaTableRomajiDefault));
 	memcpy(oyakanaLTableRomaji, oyakanaLTableRomajiDefault, sizeof(oyakanaLTableRomajiDefault));
 	memcpy(oyakanaRTableRomaji, oyakanaRTableRomajiDefault, sizeof(oyakanaRTableRomajiDefault));
+	memcpy(shiftLtableRomaji, shiftLtableRomajiDefault, sizeof(shiftLtableRomajiDefault));
+	memcpy(shiftRtableRomaji, shiftRtableRomajiDefault, sizeof(shiftRtableRomajiDefault));
 	oyakanaTableRomajiSize = sizeof(oyakanaTableRomajiDefault) / sizeof(KEYMAP_INFO);
 	oyakanaLTableRomajiSize = sizeof(oyakanaLTableRomajiDefault) / sizeof(KEYMAP_INFO);
 	oyakanaRTableRomajiSize = sizeof(oyakanaRTableRomajiDefault) / sizeof(KEYMAP_INFO);
+	shiftLtableRomajiSize = sizeof(shiftLtableRomajiDefault) / sizeof(KEYMAP_INFO);
+	shiftRtableRomajiSize = sizeof(shiftRtableRomajiDefault) / sizeof(KEYMAP_INFO);
 
 	_state = STATE_FIRST;
 	_moji = 0;
